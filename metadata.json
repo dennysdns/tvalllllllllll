@@ -1,0 +1,6 @@
+{
+  "name": "TV Alegria",
+  "description": "TV Alegria - Conteúdo ao vivo 24/7. Programação diversificada para toda a família com entretenimento, jornalismo, cultura, educação e conteúdo infantil.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

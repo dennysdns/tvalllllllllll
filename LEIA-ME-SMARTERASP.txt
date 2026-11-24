@@ -1,0 +1,24 @@
+TV ALEGRIA - AJUSTE PARA SMARTERASP.NET
+
+1) No painel SmarterASP.NET, habilite Node.js em Manage Website > Node.js (se a opção estiver disponível no seu plano/site).
+2) No computador, abra esta pasta no terminal e execute:
+   npm install
+   npm run build
+3) Envie para a raiz do site os arquivos do projeto, incluindo:
+   - web.config
+   - package.json
+   - server.ts
+   - node_modules (gerado pelo npm install)
+   - dist (gerado pelo npm run build)
+   - patrocinadores
+   - public
+   - .data (pode ser criada automaticamente; precisa permitir gravação)
+4) Não publique o index.html da raiz apontando para /src/main.tsx como site final. O servidor em produção entrega dist/index.html.
+5) No painel, confirme que o site está configurado para iniciar Node.js e reinicie o site.
+6) Se aparecer erro 500/503, consulte logs/node-log e o log de erros do Node.js no painel.
+
+IMPORTANTE:
+- O projeto usa APIs /api/... para login, estatísticas e banners. Portanto, não basta enviar somente a pasta dist: o servidor Node.js precisa estar ativo.
+- A pasta .data e a pasta patrocinadores precisam ter permissão de gravação para os recursos administrativos.
+- Configure ADMIN_PASSWORD e SESSION_SECRET como variáveis de ambiente no painel. Use uma senha forte e um SESSION_SECRET longo e aleatório.
+- Nunca compartilhe credenciais FTP, senha do painel ou tokens.
